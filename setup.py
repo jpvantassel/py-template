@@ -19,9 +19,8 @@ setup(
     author='',
     author_email='',
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 3 - Alpha',
 
-        'Intended Audience :: Developers',
         'Intended Audience :: Education',
         'Intended Audience :: Science/Research',
 
@@ -38,10 +37,9 @@ setup(
     keywords='',
     packages=find_packages(),
     python_requires = '>=3.6, <3.9',
-    install_requires=['numpy', 'scipy'],
+    install_requires=['numpy'],
     extras_require={
-        'dev': ['unittest'],
-        'test': ['unittest'],
+        'dev': [],
     },
     package_data={
     },

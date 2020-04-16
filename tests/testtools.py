@@ -1,5 +1,4 @@
-# This file is part of hvsrpy, a Python module for
-# horizontal-to-vertical spectral ratio processing.
+# This file is part of a Python package template.
 # Copyright (C) 2019-2020 Joseph P. Vantassel (jvantassel@utexas.edu)
 #
 #     This program is free software: you can redistribute it and/or modify
@@ -38,7 +37,8 @@ class TestCase(unittest.TestCase):
         self.assertListEqual(array1.tolist(), array2.tolist())
 
     def assertArrayAlmostEqual(self, array1, array2, **kwargs):
-        assert(array1.size == array2.size)
+        if array1.size != array2.size:
+            self.assertEqual(array1.size, array2.size)
         array1 = array1.flatten()
         array2 = array2.flatten()
         for v1, v2 in zip(array1, array2):
